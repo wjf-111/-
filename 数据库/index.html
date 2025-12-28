@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>票务系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginPage" class="page active">
+        <div class="login-container">
+            <h1>票务系统</h1>
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="username">昵称或手机号</label>
+                    <input type="text" id="username" name="username" placeholder="请输入昵称或手机号" required>
+                    <small style="color: #999; font-size: 12px;">支持使用昵称或手机号登录</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                </div>
+                <button type="submit" class="btn-primary">登录</button>
+                <div style="text-align: center; margin-top: 15px;">
+                    <button type="button" class="btn-link" onclick="switchToRegister()">还没有账号？立即注册</button>
+                </div>
+                <div style="margin-top: 15px; padding: 10px; background: #f0f0f0; border-radius: 5px; font-size: 12px; color: #666;">
+                    <strong>所有可登录账号（密码统一为 123456）：</strong><br>
+                    • <strong>test</strong> (13800000000) - 测试用户<br>
+                    • <strong>demo</strong> (13900000000) - 演示用户，密码: password<br>
+                    • <strong>freedom</strong> (13856927410) - 王涵之，密码: password<br>
+                    • <strong>StarryNight</strong> (13972458136) - 李梦琪<br>
+                    • <strong>清风徐来</strong> (15639827541) - 张伟<br>
+                    • <strong>小太阳</strong> (18065429738) - 刘悦<br>
+                    • <strong>喵星人</strong> (19138572649) - 杨紫涵<br>
+                    • <strong>行者无疆</strong> (18857392641) - 赵磊<br>
+                    • <strong>甜茶</strong> (13682547931) - 孙雨桐<br>
+                    • <strong>低调的大佬</strong> (15274938625) - 黄志强<br>
+                    • <strong>小透明</strong> (17863259471) - 周琳<br>
+                    <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #ddd; color: #999; font-size: 11px;">
+                        ⚠️ 注意：用户"老炮儿"（17782564930）已被禁用，无法登录
+                    </div>
+                </div>
+            </form>
+
+            <form id="registerForm" class="auth-form">
+                <h2 style="text-align: center; margin-bottom: 20px; color: #667eea;">用户注册</h2>
+                
+                <div class="form-group">
+                    <label for="regPhone">手机号 <span style="color: red;">*</span></label>
+                    <input type="tel" id="regPhone" name="regPhone" placeholder="请输入手机号" required pattern="[0-9]{11}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPassword">密码 <span style="color: red;">*</span></label>
+                    <input type="password" id="regPassword" name="regPassword" placeholder="请输入密码（至少6位）" required minlength="6">
+                </div>
+                
+                <div class="form-group">
+                    <label for="regNickname">昵称 <span style="color: red;">*</span></label>
+                    <input type="text" id="regNickname" name="regNickname" placeholder="请输入昵称" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regRealName">真实姓名</label>
+                    <input type="text" id="regRealName" name="regRealName" placeholder="请输入真实姓名（可选）">
+                </div>
+                
+                <div class="form-group">
+                    <label for="regIdCard">身份证号</label>
+                    <input type="text" id="regIdCard" name="regIdCard" placeholder="请输入身份证号（可选）" pattern="[0-9Xx]{15,18}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="regGender">性别</label>
+                    <select id="regGender" name="regGender" class="form-select">
+                        <option value="未知">请选择</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regBirthday">生日</label>
+                    <input type="date" id="regBirthday" name="regBirthday">
+                </div>
+                
+                <button type="submit" class="btn-primary">注册</button>
+                <div style="text-align: center; margin-top: 15px;">
+                    <button type="button" class="btn-link" onclick="switchToLogin()">已有账号？立即登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="appPage" class="page">
+        <header class="app-header">
+            <h2 id="pageTitle">首页</h2>
+            <button class="logout-btn" onclick="logout()" title="退出登录">退出</button>
+        </header>
+
+        <div id="homeContent" class="content active">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜索活动、场馆、商家..." class="search-input">
+                <button id="searchBtn" class="search-btn">搜索</button>
+            </div>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all" onclick="filterByCategory('all')">全部</button>
+                <button class="category-tab" data-category="演唱会" onclick="filterByCategory('演唱会')">演唱会</button>
+                <button class="category-tab" data-category="话剧" onclick="filterByCategory('话剧')">话剧</button>
+                <button class="category-tab" data-category="体育赛事" onclick="filterByCategory('体育赛事')">体育赛事</button>
+                <button class="category-tab" data-category="脱口秀" onclick="filterByCategory('脱口秀')">脱口秀</button>
+                <button class="category-tab" data-category="展览" onclick="filterByCategory('展览')">展览</button>
+                <button class="category-tab" data-category="音乐节" onclick="filterByCategory('音乐节')">音乐节</button>
+                <button class="category-tab" data-category="儿童剧" onclick="filterByCategory('儿童剧')">儿童剧</button>
+                <button class="category-tab" data-category="景区门票" onclick="filterByCategory('景区门票')">景区门票</button>
+                <button class="category-tab" data-category="商务演出" onclick="filterByCategory('商务演出')">商务演出</button>
+                <button class="category-tab" data-category="电影展映" onclick="filterByCategory('电影展映')">电影展映</button>
+            </div>
+            <div id="activityList" class="activity-list">
+            </div>
+            <div id="loadMore" class="load-more">加载更多</div>
+        </div>
+
+        <div id="activityDetailContent" class="content">
+            <div id="activityDetail" class="activity-detail">
+            </div>
+        </div>
+
+        <div id="myContent" class="content">
+            <div class="my-info">
+                <div class="user-header">
+                    <div class="avatar">👤</div>
+                    <div class="user-info">
+                        <h3 id="userNickname"></h3>
+                        <p id="userPhone"></p>
+                    </div>
+                </div>
+                <div class="balance-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                        <p style="margin: 0;">账户余额</p>
+                        <button id="toggleBalanceBtn" class="toggle-balance-btn" onclick="toggleBalance()" title="点击切换显示/隐藏">
+                            <span id="balanceIcon">👁️</span>
+                        </button>
+                    </div>
+                    <h2 id="userBalance">¥0.00</h2>
+                    <button class="recharge-btn" onclick="showRechargeModal()">💳 充值</button>
+                </div>
+            </div>
+            
+            <div class="my-menu">
+                <div class="menu-item" data-section="orders">
+                    <span>我的订单</span>
+                    <span>></span>
+                </div>
+                <div class="menu-item" data-section="comments">
+                    <span>我的评论</span>
+                    <span>></span>
+                </div>
+                <div class="menu-item" data-section="coupons">
+                    <span>我的优惠券</span>
+                    <span>></span>
+                </div>
+                <div class="menu-item" data-section="profile">
+                    <span>个人信息</span>
+                    <span>></span>
+                </div>
+            </div>
+
+            <div id="ordersSection" class="section-content" style="display: none;">
+                <h3>我的订单</h3>
+                <div id="ordersList" class="orders-list"></div>
+            </div>
+
+            <div id="commentsSection" class="section-content" style="display: none;">
+                <h3>我的评论</h3>
+                <div id="commentsList" class="comments-list"></div>
+            </div>
+
+            <div id="couponsSection" class="section-content" style="display: none;">
+                <h3>我的优惠券</h3>
+                <div id="couponsList" class="coupons-list"></div>
+            </div>
+
+            <div id="profileSection" class="section-content" style="display: none;">
+                <h3>个人信息</h3>
+                <div id="profileInfo" class="profile-info"></div>
+            </div>
+        </div>
+
+        <div id="rechargeModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>账户充值</h3>
+                    <button class="modal-close" onclick="closeRechargeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="recharge-amounts">
+                        <button class="amount-btn" data-amount="50" onclick="selectAmount(50)">¥50</button>
+                        <button class="amount-btn" data-amount="100" onclick="selectAmount(100)">¥100</button>
+                        <button class="amount-btn" data-amount="500" onclick="selectAmount(500)">¥500</button>
+                        <button class="amount-btn" data-amount="1000" onclick="selectAmount(1000)">¥1000</button>
+                    </div>
+                    <div class="custom-amount">
+                        <label for="customAmountInput">自定义金额：</label>
+                        <input type="number" id="customAmountInput" placeholder="请输入充值金额" min="1" step="1" oninput="selectCustomAmount()">
+                    </div>
+                    <div class="selected-amount-display">
+                        <p>充值金额：<span id="selectedAmount">¥0</span></p>
+                    </div>
+                    <button class="confirm-recharge-btn" onclick="confirmRecharge()">确认充值</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active" data-page="home">
+                <span>🏠</span>
+                <span>首页</span>
+            </div>
+            <div class="nav-item" data-page="my">
+                <span>👤</span>
+                <span>我的</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
