@@ -1,0 +1,11 @@
+﻿merchant_id,merchant_name,merchant_type,credit_code,contact_person,contact_phone,email,register_time,status
+101,星耀音乐文化传播有限公司,主办方,91110105MA00XXXXXX,张明,13812345678,zhangming@xingyao.com,2020/5/10 9:00,1
+102,艺境话剧演出有限公司,主办方,91310101MA01XXXXXX,李雪,13987654321,lixue@artscape.com,2018/8/15 14:00,1
+103,巅峰体育赛事运营有限公司,承办方,91440106MA02XXXXXX,王刚,13722334455,wanggang@peaksports.com,2019/3/20 10:00,1
+104,笑果文化创意有限公司,主办方,91440300MA03XXXXXX,王思,13699887766,wangsi@xiaoguo.com,2021/1/5 16:00,1
+105,艺览天下展览策划有限公司,承办方,91510107MA04XXXXXX,刘佳,13566778899,liujia@artshow.com,2017/12/10 8:00,1
+106,草莓音乐节运营管理有限公司,主办方,91330106MA05XXXXXX,陈宇,13455667788,chenyu@strawberry.com,2022/6/30 11:00,1
+107,童梦亲子文化发展有限公司,代理商,91440105MA06XXXXXX,赵琳,13388990011,zhaolin@tongmeng.com,2020/9/25 15:00,1
+108,山水旅游景区管理有限公司,代理商,91341000MA07XXXXXX,黄涛,13277889900,huangtao@shanshui.com,2016/7/18 9:00,1
+109,商聚天下会议服务有限公司,承办方,91310115MA08XXXXXX,周明,13166778899,zhouming@shangju.com,2019/11/8 13:00,1
+110,万达电影股份有限公司,代理商,91110000MA09XXXXXX,吴迪,13055667788,wudi@wanda.com,2015/4/22 10:00,0

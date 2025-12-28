@@ -1,0 +1,13 @@
+﻿venue_id,venue_name,city,address,capacity,contact_phone,intro,image_urls
+201,北京鸟巢国家体育场,北京市,朝阳区国家体育场南路 1 号,91000,010-84373000,2008 年北京奥运会主体育场，可举办大型演唱会、体育赛事，配备顶级音响与舞台设备，交通便利（地铁 8 号线奥体中心站）,"https://pic.example.com/venue_bj_nest1.jpg,https://pic.example.com/venue_bj_nest2.jpg"
+202,上海大剧院,上海市,黄浦区人民大道 300 号,2000,021-63868686,上海地标性文化建筑，以话剧、歌剧、音乐会演出为主，内部设大剧场、中剧场、小剧场，声学效果一流,"https://pic.example.com/venue_sh_theater1.jpg,https://pic.example.com/venue_sh_theater2.jpg"
+203,北京工人体育场,北京市,朝阳区工人体育场北路,66000,010-65016655,专业足球场，中超北京国安主场，可举办足球赛事、大型演唱会，看台视野开阔，配套餐饮设施完善,"https://pic.example.com/venue_bj_worker1.jpg,https://pic.example.com/venue_bj_worker2.jpg"
+204,深圳保利剧院,深圳市,南山区文心五路 33 号,1500,0755-86371698,以话剧、脱口秀、小型音乐会为主的专业剧院，座椅舒适，舞台设备先进，周边商圈发达,"https://pic.example.com/venue_sz_poly1.jpg,https://pic.example.com/venue_sz_poly2.jpg"
+205,成都当代美术馆,成都市,锦江区滨江东路 9 号,5000,028-86726500,现代化艺术展览场馆，主打沉浸式展览、艺术展映，配备恒温恒湿展柜，适合各类美术、科技展览,"https://pic.example.com/venue_cd_art1.jpg,https://pic.example.com/venue_cd_art2.jpg"
+206,杭州奥体中心体育场,杭州市,萧山区钱江世纪城奥体街 199 号,80000,0571-82876666,杭州亚运会主体育场，昵称 “大莲花”，可举办音乐节、体育赛事，户外场地配套超大 LED 屏,"https://pic.example.com/venue_hz_olympic1.jpg,https://pic.example.com/venue_hz_olympic2.jpg"
+207,广州少年宫剧场,广州市,越秀区东风西路 167 号,800,020-81361766,专注亲子、儿童剧演出的小型剧场，座椅高度适配儿童，场内设互动舞台，周边有亲子游乐设施,"https://pic.example.com/venue_gz_children1.jpg,https://pic.example.com/venue_gz_children2.jpg"
+208,黄山风景区南大门游客中心,黄山市,黄山区汤口镇汤泉路 1 号,无限制,0559-5561111,黄山风景区核心票务与接待中心，提供景区门票、索道票办理，配套停车场、导游服务，是黄山旅游的起点,"https://pic.example.com/venue_hs_mountain1.jpg,https://pic.example.com/venue_hs_mountain2.jpg"
+209,上海国际会议中心,上海市,浦东新区滨江大道 2727 号,3000,021-50370000,高端商务会议、峰会举办场馆，设多个国际会议厅，配套五星级酒店、商务餐饮，江景视野极佳,"https://pic.example.com/venue_sh_conference1.jpg,https://pic.example.com/venue_sh_conference2.jpg"
+210,北京万达影城 CBD 店 IMAX 厅,北京市,朝阳区建国路 93 号万达广场 B 座 5 层,300,010-59603399,北京知名影城，IMAX 厅配备超大银幕与杜比全景声，主打电影展映、首映礼，购票便捷，小吃部品类丰富,"https://pic.example.com/venue_bj_cinema1.jpg,https://pic.example.com/venue_bj_cinema2.jpg"
+211,深圳湾体育中心,深圳市,南山区滨海大道 3001 号,13000,0755-85088888,专业体育场馆，主打乒乓球、篮球赛事，也可举办小型演唱会，场馆内设训练馆、体育用品店,"https://pic.example.com/venue_sz_bay1.jpg,https://pic.example.com/venue_sz_bay2.jpg"
+212,南京奥林匹克体育中心体育馆,南京市,建邺区奥体大街 1 号,13000,025-86690500,南京奥体核心场馆，可举办演唱会、体育赛事，舞台搭建灵活，看台分为内场与看台，音响效果出色,"https://pic.example.com/venue_nj_olympic1.jpg,https://pic.example.com/venue_nj_olympic2.jpg"
